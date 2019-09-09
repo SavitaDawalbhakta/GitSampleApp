@@ -44,6 +44,37 @@ function Circle(radius){
 
 const another = new Circle(1).draw();
 
+
 // functions are objects
 Circle.length;
 console.log('Length : ' +Circle.length); // Circle.length returns number of arguments.
+
+// Value Type And Reference Type
+
+let x = {value : 10};  // reference type
+
+let y = x;
+
+x.value = 20; // Y will also hold 20
+
+// Adding / Removing Properties
+// another is a Circle type of object
+// add location property to it.
+
+Circle.location = {x: 1};
+createCircle.location = {x: 1}; // did not work though
+
+const propertyName = 'location';
+Circle[propertyName] = {x: 1}; // did not work
+
+//remeove property
+
+delete circle.location;
+
+//Enumerating Property
+
+for(let key in circle){       // logs available properties in circle object.
+    console.log(key);
+}
+
+
