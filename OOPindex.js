@@ -44,3 +44,6 @@ function Circle(radius){
 
 const another = new Circle(1).draw();
 
+// functions are objects
+Circle.length;
+console.log('Length : ' +Circle.length); // Circle.length returns number of arguments.
